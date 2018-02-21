@@ -1,8 +1,61 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #bdbdbd;">
+            <children>
+                <Label layoutX="61.0" layoutY="173.0" text="School Managemant System" textFill="#1b1919">
+                    <font>
+                        <Font name="Bookman Old Style" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="375.0" text="\@CopyRight by Wae-abdulkoday">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="71.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OOP%20Software/school.png" />
+               </image>
+            </ImageView>
+            </children>
+        </Pane>
+        <JFXTextField fx:id="username" focusColor="#d76053" labelFloat="true" layoutX="366.0" layoutY="80.0" prefHeight="25.0" prefWidth="160.0" promptText="Username" unFocusColor="#a41f1f">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="password" focusColor="#d76053" labelFloat="true" layoutX="365.0" layoutY="137.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" unFocusColor="#1b0606">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </JFXPasswordField>
+        <JFXButton fx:id="btnLogin" layoutX="395.0" layoutY="186.0" onAction="#Login" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #b22c2c;" text="Login" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXButton>
+        <Label layoutX="318.0" layoutY="371.0" text="DB Stataus">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+        <Label fx:id="dbStatus" layoutX="393.0" layoutY="370.0" prefHeight="17.0" prefWidth="184.0">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+        <Label fx:id="loginStatus" layoutX="318.0" layoutY="26.0" prefHeight="17.0" prefWidth="261.0" textFill="#e41111" />
+    </children>
+</AnchorPane>
